@@ -9,6 +9,10 @@ import UIKit
 
 
 class SecondViewController: UIViewController {
+    
+    
+    @IBOutlet weak var myLabel: UILabel!
+    
     @IBAction func showAllert () {
         let newAlert = UIAlertController(title: "Welcome", message: "This is myName App", preferredStyle: .alert)
         //create button "ok"
@@ -19,10 +23,16 @@ class SecondViewController: UIViewController {
         newAlert.addAction(actionOk)
         //newAlert.addAction(actionCancel)
         self.present(newAlert, animated: true, completion: nil)
-    
     }
     
-
+    @IBAction func changeLabelText(_ sender: UIButton) {
+        if let buttonText = sender.titleLabel!.text{
+            self.myLabel.text = "\(buttonText) button was pressed"
+            
+        }
+            
+    }
+    
     /*
     // MARK: - Navigation
 

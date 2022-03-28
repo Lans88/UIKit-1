@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,11 +13,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyName" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G3u-o8-C7s">
-                                <rect key="frame" x="141.66666666666666" y="406.66666666666669" width="107" height="31"/>
+                                <rect key="frame" x="153.5" y="432.5" width="107" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Hello, World!"/>
                                 <connections>
@@ -62,11 +62,11 @@
             <objects>
                 <viewController id="UsC-gT-IPr" customClass="SecondViewController" customModule="MyName" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xGJ-G9-G2f">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y2Q-AZ-LLl">
-                                <rect key="frame" x="128.33333333333331" y="376.66666666666669" width="133.33333333333331" height="37"/>
+                                <rect key="frame" x="140.5" y="402.5" width="133" height="37"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled">
@@ -82,15 +82,48 @@
                                     <action selector="showAllert" destination="UsC-gT-IPr" eventType="touchUpInside" id="3f5-y5-aIf"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pFW-3R-LQX">
+                                <rect key="frame" x="186" y="167" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wCW-W4-oJC">
+                                <rect key="frame" x="60" y="162" width="49.5" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Left"/>
+                                <connections>
+                                    <action selector="changeLabelText:" destination="UsC-gT-IPr" eventType="touchUpInside" id="p37-vZ-TKU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8xR-yG-lJT">
+                                <rect key="frame" x="296" y="162" width="58" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Right"/>
+                                <connections>
+                                    <action selector="changeLabelText:" destination="UsC-gT-IPr" eventType="touchUpInside" id="jTS-ix-5Md"/>
+                                    <action selector="showAllert" destination="UsC-gT-IPr" eventType="touchUpInside" id="FLw-dK-9wB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9QK-1Z-RuC"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                         <constraints>
-                            <constraint firstItem="Y2Q-AZ-LLl" firstAttribute="centerX" secondItem="xGJ-G9-G2f" secondAttribute="centerX" id="84x-Qf-rXd"/>
-                            <constraint firstItem="Y2Q-AZ-LLl" firstAttribute="centerY" secondItem="xGJ-G9-G2f" secondAttribute="centerY" id="ity-yc-WZ2"/>
+                            <constraint firstItem="wCW-W4-oJC" firstAttribute="leading" secondItem="9QK-1Z-RuC" secondAttribute="leading" constant="60" id="1sf-cm-GOP"/>
+                            <constraint firstItem="9QK-1Z-RuC" firstAttribute="trailing" secondItem="8xR-yG-lJT" secondAttribute="trailing" constant="60" id="ErZ-dR-TP8"/>
+                            <constraint firstItem="wCW-W4-oJC" firstAttribute="centerY" secondItem="pFW-3R-LQX" secondAttribute="centerY" id="OS8-I7-pWt"/>
+                            <constraint firstItem="Y2Q-AZ-LLl" firstAttribute="centerX" secondItem="pFW-3R-LQX" secondAttribute="centerX" id="Tfx-z9-g8C"/>
+                            <constraint firstItem="pFW-3R-LQX" firstAttribute="leading" secondItem="wCW-W4-oJC" secondAttribute="trailing" constant="76.5" id="cWG-an-nRQ"/>
+                            <constraint firstItem="8xR-yG-lJT" firstAttribute="top" secondItem="9QK-1Z-RuC" secondAttribute="top" constant="162" id="fke-S2-GAv"/>
+                            <constraint firstItem="wCW-W4-oJC" firstAttribute="baseline" secondItem="8xR-yG-lJT" secondAttribute="baseline" id="leR-KV-P1d"/>
+                            <constraint firstItem="Y2Q-AZ-LLl" firstAttribute="centerY" secondItem="xGJ-G9-G2f" secondAttribute="centerY" id="qSl-lv-dN9"/>
+                            <constraint firstItem="8xR-yG-lJT" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="pFW-3R-LQX" secondAttribute="trailing" constant="8" symbolic="YES" id="xBk-1o-Lpu"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="geM-Rw-ztd"/>
+                    <connections>
+                        <outlet property="myLabel" destination="pFW-3R-LQX" id="Ljz-Ei-Gfa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q8N-eF-Im4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
